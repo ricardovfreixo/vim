@@ -9,7 +9,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'mattn/emmet-vim'
 Plugin 'Raimondi/delimitMate'
-
+Plugin 'posva/vim-vue'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -46,5 +46,8 @@ nnoremap E $
 nnoremap $ <nop>
 nnoremap ^ <nop>
 
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/*
+
 let mapleader=","
 
+au BufNewFile,BufRead *.vue setf vue
